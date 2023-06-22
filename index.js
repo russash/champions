@@ -23,7 +23,11 @@ const endorsementListEl = document.getElementById("endorsement-list");
 publishButtonEl.addEventListener("click", function () {
   let endorsementValue = textAreaEl.value;
 
-  push(endorsementListInDB, endorsementValue);
+  if (endorsementValue) {
+    push(endorsementListInDB, endorsementValue);
+  } else {
+    //
+  }
 
   cleartextAreaEl();
 });
